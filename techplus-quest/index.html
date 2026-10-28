@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tech+ Quest</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <div id="hud">
+      <div id="hud-score">Score: 0</div>
+      <div id="badge-row"></div>
+      <div id="hud-time">Time: 0:00</div>
+    </div>
+    <canvas id="game-canvas" width="800" height="600"></canvas>
+  </div>
+
+  <div id="start-screen" class="overlay">
+    <div class="overlay-box">
+      <h1>Tech+ Quest</h1>
+      <p>Explore the IT campus and earn a badge in all six CompTIA Tech+ domains:</p>
+      <ul>
+        <li>IT Concepts &amp; Terminology</li>
+        <li>Infrastructure</li>
+        <li>Applications &amp; Software</li>
+        <li>Software Development</li>
+        <li>Database Fundamentals</li>
+        <li>Security</li>
+      </ul>
+      <p class="controls">Move: <kbd>WASD</kbd> or <kbd>Arrow Keys</kbd> &nbsp;|&nbsp; Interact: <kbd>E</kbd> or <kbd>Space</kbd></p>
+      <button id="start-btn">Start Game</button>
+    </div>
+  </div>
+
+  <div id="win-screen" class="overlay" hidden>
+    <div class="overlay-box">
+      <h1>All Badges Earned!</h1>
+      <p id="win-summary"></p>
+      <button id="play-again-btn">Play Again</button>
+    </div>
+  </div>
+
+  <div id="quiz-modal" class="overlay" hidden>
+    <div class="overlay-box quiz-box">
+      <h2 id="quiz-domain"></h2>
+      <p id="quiz-question"></p>
+      <div id="quiz-choices"></div>
+      <p id="quiz-feedback" class="quiz-feedback"></p>
+      <button id="quiz-continue" hidden>Continue</button>
+    </div>
+  </div>
+
+  <script src="js/map.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
